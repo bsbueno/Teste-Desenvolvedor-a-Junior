@@ -1,0 +1,31 @@
+{
+   "name": "quadrinhos",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "ts-node-dev": "^1.1.6",
+      "tsconfig-paths": "^3.9.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "body-parser": "^1.18.1",
+      "concurrently": "^6.2.0",
+      "cookie-parser": "^1.4.5",
+      "cors": "^2.8.5",
+      "express": "^4.15.4",
+      "nodemon": "^2.0.7",
+      "path": "^0.12.7",
+      "pg": "^8.6.0",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "^0.2.32"
+   },
+   "scripts": {
+      "client": "npm start --prefix client",
+      "server": "nodemon src/index.ts",
+      "start": "ts-node src/index.ts",
+      "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+      "dev": "concurrently \"npm run server\" \"npm run client\""
+   }
+}
